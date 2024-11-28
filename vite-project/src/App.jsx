@@ -47,25 +47,27 @@ const App = () => {
   let isEmpty = form.name && form.lastName && form.phone && form.email && form.comment;
 
   return (
-    <form onSubmit={handler}>
-      <label htmlFor="name">Ad:
-        <input value = {form.name} name = "name" type = "text" onChange={handleChange} />
-      </label>
-      <label htmlFor="lastName">Soyad:
-        <input value = {form.lastName} name = "lastName" type = "text" onChange={handleChange} />
-      </label>
-      <label htmlFor="phone">Telefon:
-        <input value={form.phone} name = "phone" type = "tel" onChange={handleChange} />
-      </label>
-      <label htmlFor="email">E-mail:
-        <input value={form.email} name = "email" type = "email" onChange={handleChange} />
-      </label>
-      <label htmlFor="comment">Şərh:
-        <input value={form.comment} name = "comment" type = "text" onChange={handleChange} />
-      </label>
-      <div className = "alert">{form.message}</div>
-      <button disabled={!isEmpty}>Send</button>
-    </form>
+    <div className = "container">
+      <form onSubmit={handler}>
+        <label htmlFor="name">Ad:
+          <input value = {form.name} name = "name" type = "text" onChange={handleChange} />
+        </label>
+        <label htmlFor="lastName">Soyad:
+          <input value = {form.lastName} name = "lastName" type = "text" onChange={handleChange} />
+        </label>
+        <label htmlFor="phone">Telefon:
+          <input value={form.phone} name = "phone" type = "tel" onChange={handleChange} />
+        </label>
+        <label htmlFor="email">E-mail:
+          <input value={form.email} name = "email" type = "email" onChange={handleChange} />
+        </label>
+        <label htmlFor="comment">Şərh:
+          <input value={form.comment} name = "comment" type = "text" onChange={handleChange} />
+        </label>
+        <div className = "alert">{form.message}</div>
+        <button disabled={!isEmpty}>Send</button>
+      </form>
+    </div>
   )
 }
 
